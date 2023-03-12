@@ -9,10 +9,10 @@ from django.utils.translation import gettext as _
 # Register your models here.
 class UserAdmin(BaseUserAdmin):
     ordering = ['id']
-    list_display= ['email', 'name']
+    list_display= ['email', 'username']
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        (_('Personal info'), {'fields': ('name',)}),
+        (_('Personal info'), {'fields': ('username',)}),
         (_('Permissions'), {'fields':('is_active', 'is_staff', 'is_superuser')}),
         (_('Important Date'), {'fields':('last_login',)}),
     )

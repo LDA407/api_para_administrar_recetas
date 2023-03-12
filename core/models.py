@@ -40,7 +40,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
     """hacer login con email"""
     email = models.EmailField(max_length=200, unique=True)
-    name = models.CharField(max_length=200)
+    username = models.CharField(max_length=200)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
